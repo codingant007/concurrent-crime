@@ -32,8 +32,8 @@ public class PreProcessor {
 	}
 	
 	private void submitProcessedData(){
-		//System.out.println("Data processed!");
 		List<Integer> processedData = processData();
+		System.out.println(processedData);
 		for(Fuser fuser : fusers){
 			fuser.submitData(processedData);
 		}

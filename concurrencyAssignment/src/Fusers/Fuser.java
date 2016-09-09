@@ -2,11 +2,9 @@ package Fusers;
 
 import java.util.List;
 
-import main.App;
-
 public abstract class Fuser {
 	
-	private List<Integer> data;
+	protected List<Integer> data;
 
 	public synchronized void submitData(List<Integer> data){
 		this.data = data;
@@ -17,7 +15,7 @@ public abstract class Fuser {
 		if(data == null){
 			try{ wait(); }catch(Exception ex){}
 		}
-		System.out.println("Data fused!");
+		fuse();
 		data = null;
 	}
 	

@@ -16,7 +16,7 @@ public class BufferWriter implements Runnable{
 		while(true){
 			//System.out.println("BufferWriter Thread: buffer.push...");
 			try{Thread.sleep(1000);}catch(InterruptedException e){System.out.println(e);} 
-			buffer.push(RandomBinaryGenerator.getRandomBinary());
+			buffer.push(RandomBinaryGenerator.getRandom8BittBinary());
 		}
 	}
 	

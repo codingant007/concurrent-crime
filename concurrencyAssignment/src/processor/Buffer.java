@@ -22,7 +22,7 @@ public class Buffer {
 	public synchronized String pick(){
 		String head;
 		try{
-			System.out.println("buffer -> " + queue);
+			//System.out.println("buffer -> " + queue);
 			head = queue.remove();
 		}
 		catch(NoSuchElementException e){
